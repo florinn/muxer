@@ -1,0 +1,20 @@
+/*
+ * This ASN.1 specification is given as an example.
+ * Your own ASN.1 module must be properly formed as well!
+ * (Make sure it has BEGIN/END statements, etc.)
+ */
+TestModule DEFINITIONS ::= 
+BEGIN
+
+  InputType ::= SEQUENCE {
+      invokeid INTEGER,
+      command OCTET STRING (SIZE(1..256))
+  }
+
+  OutputType ::= SEQUENCE {
+      invokeid INTEGER,
+      command OCTET STRING (SIZE(1..256)),
+      result OCTET STRING (SIZE(1..256))
+  }
+
+END
